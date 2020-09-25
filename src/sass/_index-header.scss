@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import "base";
+.header {
+    //头部
+    @include auto();
+    height: 100px;
+    color: #333;
+    // background: red;
+    @include display(row, space-between, center);
+    //弹性盒函数调用
+    img {
+        //logo图片
+        height: $h;
+    }
+    .title {
+        //服务标题列表
+        height: $h;
+        list-style: none;
+        @include display(row, space-between, center);
+        li {
+            height: $h;
+            padding: 0 20px;
+            line-height: 100px;
+        }
+    }
+    .search {
+        //搜索框
+        width: 391px;
+        height: 100%;
+        @include display(column, center, center);
+        .search_from {
+            //搜索框主体
+            height: 36px;
+            width: 100%;
+            @include border(3px, solid, $color);
+            @include display(row, space-between, center);
+            // background: darkcyan;
+            input {
+                //输入框
+                height: $h*0.8;
+                width: 340px;
+                border-style: none;
+            }
+            .button {
+                //搜索按钮
+                background: $color;
+                width: 53px;
+                height: $h;
+            }
+        }
+        .list {
+            //搜索框底部的列表
+            @include display(row, space-between, center);
+            li {
+                padding: 0 13px;
+                font-size: $fs;
+            }
+        }
+    }
+    .cart {
+        width: 96px;
+    }
+}

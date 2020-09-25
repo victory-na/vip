@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "base";
+.footer {
+    @include auto();
+    height: 496px;
+    .footer_content {
+        height: 447px;
+        background: cadetblue;
+    }
+    .footer_footer {
+        height: 48px;
+        background: chocolate;
+    }
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+.woman {
+    width: 1000px;
+    margin: 0 auto 20px;
+    .woman_title {
+        height: 43px;
+        border-bottom: 1px solid black;
+        margin-bottom: 30px;
+    }
+    .woman_content {
+        height: 1500px;
+        background: blue;
+    }
+    .woman_footer {
+        height: 44px;
+        background: brown;
+        margin-bottom: 20px;
+    }
+}

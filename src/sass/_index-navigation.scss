@@ -1,0 +1,42 @@
+@charset "utf-8";
+@import "base";
+.navigation {
+    @include auto();
+    height: 43px;
+    // background: gold;
+    li {
+        height: $h;
+        line-height: 43px;
+        padding: 0 15px;
+    }
+    .sp {
+        background: $color;
+        color: #fff;
+        position: relative;
+        ul {
+            @extend .sp;
+            width: 100%;
+            @include display(column, center, center);
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 43px;
+        }
+    }
+    .first {
+        color: $color;
+    }
+    .last {
+        position: relative;
+        ul {
+            background: #fff;
+            color: #000;
+            width: 100%;
+            @include display(column, center, center);
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 43px;
+        }
+    }
+}

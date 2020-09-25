@@ -1,0 +1,35 @@
+@import "base";
+.must_see {
+    @include auto();
+    display: flex;
+    flex-direction: column;
+    .title {
+        height: 60px;
+        width: 100%;
+        margin-bottom: 20px;
+        background: url(http://a.vpimg2.com/upload/flow/2018/08/17/154/15344789862278.jpg);
+        background-size: 100% 100%;
+    }
+    .m_wrap {
+        display: flex;
+        flex-direction: row;
+        .snap_up {
+            width: 510px;
+            height: 290px;
+            background: url(https://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/02/77/1599038966107_1020x580_90.png);
+            background-size: 100% 100%;
+        }
+        .ranking_list {
+            width: 490px;
+            height: 290px;
+            background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/81/1599118580733_980x580_90.png);
+            background-size: 100% 100%;
+        }
+    }
+    .low_price {
+        width: 1000px;
+        height: 298px;
+        background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/18/152/1600421099298_2000x596_90.png);
+        background-size: 100% 100%;
+    }
+}
