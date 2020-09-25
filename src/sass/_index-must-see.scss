@@ -14,21 +14,64 @@
         display: flex;
         flex-direction: row;
         .snap_up {
-            width: 510px;
-            height: 290px;
+            @include wh( 510px, 300px);
             background: url(https://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/02/77/1599038966107_1020x580_90.png);
             background-size: 100% 100%;
+            overflow: hidden;
+            position: relative;
+            ul {
+                height: 280px;
+                position: absolute;
+                left: 10px;
+                top: 30px;
+                @include display(row, space-between, center);
+                li {
+                    @include wh( 147px, 210px);
+                    background: darkmagenta;
+                    margin-right: 10px;
+                    div {
+                        @include wh($h, 186px);
+                        z-index: 0;
+                        position: relative;
+                        background: darkorange;
+                        & article {
+                            position: absolute;
+                            bottom: 20px;
+                            left: 21px;
+                            z-index: 1;
+                            @include wh( 105px, 64px);
+                            background: #fff;
+                            opacity: 0.8;
+                            @include display(column, space-between, center);
+                            img {
+                                margin-top: 5px;
+                                z-index: 2;
+                                @include wh( 66px, 33px);
+                                background: darkturquoise;
+                            }
+                            span {
+                                z-index: 2;
+                                @include wh( 104px, 18px);
+                                background: deeppink;
+                            }
+                        }
+                    }
+                    aside {
+                        z-index: 1;
+                        @include wh($h, 20px);
+                        background: darkred;
+                    }
+                }
+            }
         }
         .ranking_list {
-            width: 490px;
-            height: 290px;
+            @include wh( 490px, 300px);
             background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/81/1599118580733_980x580_90.png);
             background-size: 100% 100%;
         }
     }
     .low_price {
-        width: 1000px;
-        height: 298px;
+        @include wh( 1000px, 298px);
         background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/18/152/1600421099298_2000x596_90.png);
         background-size: 100% 100%;
     }

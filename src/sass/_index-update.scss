@@ -1,7 +1,6 @@
 @charset "utf-8";
 .update {
-    width: 1000px;
-    margin: 0 auto 30px;
+    @include auto();
     height: 68px;
     background: url(http://a.vpimg4.com/upload/dop/2019/05/23/58/today_DDp.png);
     background-size: 100% 100%;

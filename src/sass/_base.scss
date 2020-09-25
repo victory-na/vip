@@ -1,42 +1,47 @@
-@charset "utf-8";
-$b:#f5f5f5;
-$fs:12px;
-$h:100%;
-$color:#f10180;
-@mixin display($fd:row, $jc:center, $ai:center) {
-    //弹性盒函数
-    display: flex;
-    flex-direction: $fd;
-    justify-content: $jc;
-    align-items: $ai;
-}
-
-@mixin auto {
-    //居中
-    margin: 0 auto;
-    width: 1000px;
-}
-
-@mixin position1($p:retalive) {
-    //定位函数
-    position: $p;
-}
-
-@mixin position2($p:absolute, $l:null, $t:null, $b:null, $r:null) {
-    //定位函数
-    position: $p;
-    @if($l!=""& &$l!=null) {
-        left: $l;
-    }
-}
-
-@mixin border($w:1px, $s:solid, $c:$color) {
-    //边框
-    border: $w $s $c;
-}
-
-ul {
-    //ul的一些常用属性
-    list-style: none;
-    @include display(row, flex-start, center)
-}
+        @charset "utf-8";
+        $b:#f5f5f5;
+        $fs:12px;
+        $h:100%;
+        $color:#f10180;
+        @mixin display($fd:row, $jc:center, $ai:center) {
+            //弹性盒函数
+            display: flex;
+            flex-direction: $fd;
+            justify-content: $jc;
+            align-items: $ai;
+        }
+        
+        @mixin auto {
+            //居中
+            margin: 0 auto;
+            width: 1000px;
+        }
+        
+        @mixin wh($width, $height) {
+            width: $width;
+            height: $height;
+        }
+        
+        @mixin position1($p:retalive) {
+            //定位函数
+            position: $p;
+        }
+        
+        @mixin position2($p:absolute, $l:null, $t:null, $b:null, $r:null) {
+            //定位函数
+            position: $p;
+            @if($l!=""& &$l!=null) {
+                left: $l;
+            }
+        }
+        
+        @mixin border($w:1px, $s:solid, $c:$color) {
+            //边框
+            border: $w $s $c;
+        }
+        
+        ul {
+            //ul的一些常用属性
+            list-style: none;
+            @include display(row, flex-start, center)
+        }

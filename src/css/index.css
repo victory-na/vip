@@ -14,6 +14,7 @@ ul {
 .top_nav {
   font-size: 12px;
   background-color: #f5f5f5;
+  width: 100%;
   height: 30px;
   color: #777;
   display: flex;
@@ -33,7 +34,7 @@ ul {
 
 .top_nav .wrap .area {
   display: flex;
-  flex-direction: space-between;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 86px;
@@ -43,13 +44,17 @@ ul {
   height: 100%;
   list-style: none;
   display: flex;
-  flex-direction: space-between;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
 
 .top_nav .wrap ul li {
-  padding: 0 13px;
+  padding: 0 5px;
+}
+
+.top_nav .wrap ul li .icon-lihe {
+  color: #f10180;
 }
 
 ul {
@@ -86,8 +91,15 @@ ul {
 
 .header .title li {
   height: 100%;
-  padding: 0 20px;
+  font-size: 15px;
+  padding: 0 10px;
+  color: #999;
   line-height: 100px;
+}
+
+.header .title li .iconfont {
+  color: #f10180;
+  font-size: 20px;
 }
 
 .header .search {
@@ -100,9 +112,9 @@ ul {
 }
 
 .header .search .search_from {
-  height: 36px;
+  height: 32px;
   width: 100%;
-  border: 3px solid #f10180;
+  border: 2px solid #f10180;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -119,6 +131,12 @@ ul {
   background: #f10180;
   width: 53px;
   height: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.header .search .search_from .button .icon-sou {
+  font-size: 25px;
 }
 
 .header .search .list {
@@ -126,15 +144,42 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: #999;
+  margin-top: 3px;
 }
 
 .header .search .list li {
   padding: 0 13px;
+  border-left: 1px solid #999;
   font-size: 12px;
+}
+
+.header .search .list .first {
+  border: none;
 }
 
 .header .cart {
   width: 96px;
+  height: 32px;
+  color: #333;
+  border: 1px solid #aaa;
+  background-color: #f3f3f3;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .cart .num {
+  width: 25px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #f10180;
+  color: #fff;
+  text-align: center;
+  line-height: 16px;
 }
 
 ul {
@@ -198,6 +243,7 @@ ul {
 }
 
 .banner {
+  width: 100%;
   height: 442px;
   background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -50px, 0;
 }
@@ -236,14 +282,79 @@ ul {
 
 .must_see .m_wrap .snap_up {
   width: 510px;
-  height: 290px;
+  height: 300px;
   background: url(https://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/02/77/1599038966107_1020x580_90.png);
   background-size: 100% 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.must_see .m_wrap .snap_up ul {
+  height: 280px;
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.must_see .m_wrap .snap_up ul li {
+  width: 147px;
+  height: 210px;
+  background: darkmagenta;
+  margin-right: 10px;
+}
+
+.must_see .m_wrap .snap_up ul li div {
+  width: 100%;
+  height: 186px;
+  z-index: 0;
+  position: relative;
+  background: darkorange;
+}
+
+.must_see .m_wrap .snap_up ul li div article {
+  position: absolute;
+  bottom: 20px;
+  left: 21px;
+  z-index: 1;
+  width: 105px;
+  height: 64px;
+  background: #fff;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.must_see .m_wrap .snap_up ul li div article img {
+  margin-top: 5px;
+  z-index: 2;
+  width: 66px;
+  height: 33px;
+  background: darkturquoise;
+}
+
+.must_see .m_wrap .snap_up ul li div article span {
+  z-index: 2;
+  width: 104px;
+  height: 18px;
+  background: deeppink;
+}
+
+.must_see .m_wrap .snap_up ul li aside {
+  z-index: 1;
+  width: 100%;
+  height: 20px;
+  background: darkred;
 }
 
 .must_see .m_wrap .ranking_list {
   width: 490px;
-  height: 290px;
+  height: 300px;
   background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/81/1599118580733_980x580_90.png);
   background-size: 100% 100%;
 }
@@ -256,52 +367,42 @@ ul {
 }
 
 .update {
+  margin: 0 auto;
   width: 1000px;
-  margin: 0 auto 30px;
   height: 68px;
   background: url(http://a.vpimg4.com/upload/dop/2019/05/23/58/today_DDp.png);
   background-size: 100% 100%;
 }
 
-.woman {
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.woman, .shoe, .man, .sport {
   width: 1000px;
   margin: 0 auto 20px;
 }
 
-.woman .woman_title {
+.woman .woman_title, .shoe .woman_title, .man .woman_title, .sport .woman_title {
   height: 43px;
   border-bottom: 1px solid black;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.woman .woman_content {
-  height: 1500px;
+.woman .woman_content, .shoe .woman_content, .man .woman_content, .sport .woman_content {
+  height: 150px;
   background: blue;
 }
 
-.woman .woman_footer {
-  height: 44px;
-  background: brown;
-  margin-bottom: 20px;
-}
-
-.shoe {
-  width: 1000px;
-  margin: 0 auto 20px;
-}
-
-.shoe .shoe_title {
-  height: 43px;
-  border-bottom: 1px solid black;
-  margin-bottom: 30px;
-}
-
-.shoe .shoe_content {
-  height: 1500px;
-  background: blue;
-}
-
-.shoe .shoe_footer {
+.woman .woman_footer, .shoe .woman_footer, .man .woman_footer, .sport .woman_footer {
   height: 44px;
   background: brown;
   margin-bottom: 20px;
@@ -329,4 +430,86 @@ ul {
 .footer .footer_footer {
   height: 48px;
   background: chocolate;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar {
+  width: 30px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+.sidebar .iconfont {
+  font-size: 26px;
+}
+
+.sidebar .icon-youhuiquan,
+.sidebar .icon-lishijilu {
+  font-size: 20px;
+}
+
+.sidebar ul {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.sidebar ul .cart {
+  padding: 10px 0;
+  background: #f10180;
+}
+
+.sidebar p {
+  font-size: 35px;
+  margin-top: 50px;
+}
+
+.louti {
+  list-style: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  width: 78px;
+  height: 370px;
+  position: fixed;
+  left: 50px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.louti li {
+  text-align: center;
+  line-height: 31px;
+  border-radius: 5px;
+  width: 70px;
+  height: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

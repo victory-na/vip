@@ -1,6 +1,6 @@
 @charset "utf-8";
 .banner {
-    height: 442px;
+    @include wh( $h, 442px);
     background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -50px, 0;
 }
 

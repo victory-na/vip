@@ -19,8 +19,14 @@
         @include display(row, space-between, center);
         li {
             height: $h;
-            padding: 0 20px;
+            font-size: $fs+3;
+            padding: 0 10px;
+            color: #999;
             line-height: 100px;
+            .iconfont {
+                color: $color;
+                font-size: $fs+8;
+            }
         }
     }
     .search {
@@ -30,9 +36,9 @@
         @include display(column, center, center);
         .search_from {
             //搜索框主体
-            height: 36px;
+            height: 32px;
             width: 100%;
-            @include border(3px, solid, $color);
+            @include border(2px, solid, $color);
             @include display(row, space-between, center);
             // background: darkcyan;
             input {
@@ -46,18 +52,45 @@
                 background: $color;
                 width: 53px;
                 height: $h;
+                color: #fff;
+                text-align: center;
+                .icon-sou {
+                    font-size: 25px;
+                }
             }
         }
         .list {
             //搜索框底部的列表
             @include display(row, space-between, center);
+            color: #999;
+            margin-top: 3px;
             li {
                 padding: 0 13px;
+                border-left: 1px solid #999;
                 font-size: $fs;
+            }
+            .first {
+                border: none;
             }
         }
     }
     .cart {
         width: 96px;
+        height: 32px;
+        color: #333;
+        @include border(1px, solid, #aaa);
+        background-color: rgb(243, 243, 243);
+        margin-bottom: 20px;
+        font-size: 14px;
+        @include display(row, space-around, center);
+        .num {
+            width: 25px;
+            height: 16px;
+            border-radius: 8px;
+            background-color: $color;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
     }
 }

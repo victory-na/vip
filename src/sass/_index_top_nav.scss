@@ -3,26 +3,27 @@
 .top_nav {
     font-size: $fs;
     background-color: $b;
-    height: 30px;
+    @include wh($h, 30px);
     color: #777;
     @include display();
     // display: flex;
     // justify-content: center;
     .wrap {
-        width: 1000px;
-        // background: darkblue;
-        height: $h;
+        @include wh( 1000px, $h);
         @include display(row, space-between, center);
         .area {
-            @include display( space-between, space-between, center);
+            @include display( row, space-between, center);
             width: 86px;
         }
         ul {
             height: $h;
             list-style: none;
-            @include display(space-between, space-between, center);
+            @include display(row-reverse, space-between, center);
             li {
-                padding: 0 13px;
+                padding: 0 5px;
+                .icon-lihe {
+                    color: $color;
+                }
             }
         }
     }

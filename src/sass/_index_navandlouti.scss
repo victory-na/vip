@@ -1,0 +1,57 @@
+@import "base";
+.sidebar {
+    @include wh( 30px, 100%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    .iconfont {
+        font-size: 26px;
+    }
+    .icon-youhuiquan,
+    .icon-lishijilu {
+        font-size: 20px;
+    }
+    ul {
+        margin-top: 100px;
+        @include display(column, center, center);
+        flex-wrap: wrap;
+        li {
+            margin: 10px 0;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .cart {
+            padding: 10px 0;
+            background: $color;
+        }
+    }
+    p {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+}
+
+.louti {
+    list-style: none;
+    // background-color: darkgray;
+    @include border(1px, solid, #aaa);
+    border-radius: 5px;
+    @include wh( 78px, 370px);
+    position: fixed;
+    left: 50px;
+    top: 100px;
+    @include display(column, space-between, center);
+    padding: 5px 0;
+    font-size: 14px;
+    li {
+        text-align: center;
+        line-height: 31px;
+        border-radius: 5px;
+        @include wh( 70px, 31px);
+        @include display(row, space-around, center);
+        // background-color: darkmagenta;
+    }
+}
