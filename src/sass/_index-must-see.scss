@@ -27,13 +27,17 @@
                 @include display(row, space-between, center);
                 li {
                     @include wh( 147px, 210px);
-                    background: darkmagenta;
+                    // background: url(http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/09/19/107/134a186f-2f6f-4736-9ef8-6f10031d083d_420_531_294x372_90.jpg);
                     margin-right: 10px;
                     div {
                         @include wh($h, 186px);
                         z-index: 0;
                         position: relative;
-                        background: darkorange;
+                        // background: url(http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/09/19/107/134a186f-2f6f-4736-9ef8-6f10031d083d_420_531_294x372_90.jpg);
+                        // box-sizing: 100% 100%;
+                        img {
+                            @include wh( $h, $h);
+                        }
                         & article {
                             position: absolute;
                             bottom: 20px;
@@ -41,25 +45,34 @@
                             z-index: 1;
                             @include wh( 105px, 64px);
                             background: #fff;
-                            opacity: 0.8;
+                            opacity: 0.9;
                             @include display(column, space-between, center);
                             img {
                                 margin-top: 5px;
                                 z-index: 2;
                                 @include wh( 66px, 33px);
-                                background: darkturquoise;
+                                // background: darkturquoise;
                             }
                             span {
                                 z-index: 2;
                                 @include wh( 104px, 18px);
-                                background: deeppink;
+                                text-align: center;
+                                font-size: $fs;
+                                // background: deeppink;、
                             }
                         }
                     }
                     aside {
                         z-index: 1;
                         @include wh($h, 20px);
-                        background: darkred;
+                        text-align: center;
+                        span {
+                            color: #fff;
+                            background: $color;
+                            padding: 2px;
+                            font-size: $fs;
+                            border-radius: 6px;
+                        }
                     }
                 }
             }

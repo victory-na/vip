@@ -1,11 +1,45 @@
 @charset "utf-8";
 @import "base";
 .footer {
-    @include auto();
+    width: $h;
     height: 496px;
+    border-top: 1px solid #eee;
     .footer_content {
+        @include auto();
         height: 447px;
-        background: cadetblue;
+        padding: 30px 10px 10px 10px;
+        @include display(column, center, center);
+        // background: cadetblue;
+        // img {
+        // }
+        .wrap {
+            margin-top: 40px;
+            @include display(raw, space-between, center);
+            .list {
+                @include display(column, flex-start, flex-start);
+                font-size: $fs+3;
+                padding-left: 20px;
+                border-right: 1px solid #eee;
+                ul {
+                    padding-left: 10px;
+                    font-size: $fs;
+                    line-height: 20px;
+                    color: #333;
+                    @include wh(137px, 146px);
+                    list-style: unset;
+                    @include display(column, flex-start, flex-start);
+                    li {
+                        margin-top: 4px;
+                        text-indent: 10px;
+                    }
+                }
+            }
+            .erweima {
+                @include wh(137px, 166px);
+                margin: 0;
+                padding-left: 10px;
+            }
+        }
     }
     .footer_footer {
         height: 48px;

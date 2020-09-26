@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+@import "base";
 @import "index_top_nav";
 @import "index-header";
 @import "index-navigation";
@@ -13,3 +14,22 @@
 @import "index-woman";
 @import "index-footer";
 @import "index_navandlouti";
+.newimg {
+    display: inline-block;
+    width: $h;
+    @include display();
+    img {
+        width: 1000px;
+    }
+}
+
+.new {
+    width: 1000px;
+    margin: 0 auto;
+    @extend .newimg;
+    img {
+        display: inline-block;
+        padding: 0 8px 8px 0;
+        width: 328px;
+    }
+}
