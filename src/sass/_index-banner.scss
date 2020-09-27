@@ -1,9 +1,46 @@
-@charset "utf-8";
-.banner {
-    @include wh( $h, 442px);
-    background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -50px, 0;
-}
-
-.banner_title {
-    height: 43px;
-}
+    @charset "utf-8";
+    .banner {
+        @include wh( $h, 442px);
+        background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -45px -10px;
+        position: relative;
+        overflow: hidden;
+        .wrap {
+            margin: 35px 0px 0px 190px;
+            @include wh( 966px, 412px);
+            @include border(1px, solid, #eee);
+        }
+        .banner_ul {
+            @include wh(1872px, 320px);
+            position: absolute;
+            top: 50px;
+            left: 200px;
+        }
+        li {
+            list-style: none;
+            @include wh(936px, 320px);
+            @include display();
+            flex-wrap: nowrap;
+            img {
+                @include wh(936px, 320px);
+            }
+            .img2 {
+                display: none;
+            }
+        }
+    }
+    
+    .banner_title {
+        position: absolute;
+        bottom: 30px;
+        @include wh(966px, 40px);
+        .banner_title_ul {
+            @include wh($h, 40px);
+            @include display();
+        }
+        li {
+            list-style: none;
+            @include wh(195px, 40px);
+            font-size: $fs;
+            overflow: hidden;
+        }
+    }

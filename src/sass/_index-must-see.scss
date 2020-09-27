@@ -25,6 +25,7 @@
                 left: 10px;
                 top: 30px;
                 @include display(row, space-between, center);
+                padding-left: 10px;
                 li {
                     @include wh( 147px, 210px);
                     // background: url(http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/09/19/107/134a186f-2f6f-4736-9ef8-6f10031d083d_420_531_294x372_90.jpg);
@@ -81,11 +82,108 @@
             @include wh( 490px, 300px);
             background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/81/1599118580733_980x580_90.png);
             background-size: 100% 100%;
+            position: relative;
+            ul {
+                height: 280px;
+                position: absolute;
+                left: 10px;
+                top: 30px;
+                @include display(row, space-between, center);
+                padding-left: 10px;
+                li {
+                    @include wh( 147px, 210px);
+                    // background: url(http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/09/19/107/134a186f-2f6f-4736-9ef8-6f10031d083d_420_531_294x372_90.jpg);
+                    margin-right: 10px;
+                    background: #eee;
+                    div {
+                        @include wh($h, 186px);
+                        z-index: 0;
+                        position: relative;
+                        // background: url(http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/09/19/107/134a186f-2f6f-4736-9ef8-6f10031d083d_420_531_294x372_90.jpg);
+                        // box-sizing: 100% 100%;
+                        img {
+                            @include wh( $h, $h);
+                        }
+                        span {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 21px;
+                            z-index: 2;
+                            @include wh( 104px, 18px);
+                            // background: deeppink;、
+                        }
+                    }
+                    aside {
+                        z-index: 1;
+                        @include wh($h, 20px);
+                        text-align: center;
+                        font-size: $fs;
+                        position: relative;
+                        span {
+                            color: #fff;
+                            background: $color;
+                            padding: 2px;
+                            position: absolute;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
     .low_price {
         @include wh( 1000px, 298px);
         background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/18/152/1600421099298_2000x596_90.png);
         background-size: 100% 100%;
+        position: relative;
+        ul {
+            height: 250px;
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            @include display(row, space-between, center);
+            padding-top: 30px;
+            padding-left: 10px;
+            li {
+                @include wh( 147px, 210px);
+                margin-right: 10px;
+                aside {
+                    z-index: 1;
+                    @include wh($h, 20px);
+                    text-align: center;
+                    span {
+                        color: #fff;
+                        background: $color;
+                        padding: 2px;
+                        font-size: $fs;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            & div {
+                @include wh($h, 186px);
+                z-index: 0;
+                position: relative;
+                img {
+                    @include wh( 145px, 145px);
+                }
+                & article {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 21px;
+                    z-index: 1;
+                    @include wh( 105px, 64px);
+                    background: #fff;
+                    @include border(1px, solid, #eee);
+                    @include display(column, space-between, center);
+                    img {
+                        margin-top: 5px;
+                        z-index: 2;
+                        @include wh( 68px, 35px);
+                        // background: darkturquoise;
+                    }
+                }
+            }
+        }
     }
 }

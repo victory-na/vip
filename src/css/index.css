@@ -253,11 +253,68 @@ ul {
 .banner {
   width: 100%;
   height: 442px;
-  background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -50px, 0;
+  background: url(http://a.vpimg2.com/upload/flow/2020/09/01/111/15989469429411.jpg) -45px -10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .wrap {
+  margin: 35px 0px 0px 190px;
+  width: 966px;
+  height: 412px;
+  border: 1px solid #eee;
+}
+
+.banner .banner_ul {
+  width: 1872px;
+  height: 320px;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+.banner li {
+  list-style: none;
+  width: 936px;
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.banner li img {
+  width: 936px;
+  height: 320px;
+}
+
+.banner li .img2 {
+  display: none;
 }
 
 .banner_title {
-  height: 43px;
+  position: absolute;
+  bottom: 30px;
+  width: 966px;
+  height: 40px;
+}
+
+.banner_title .banner_title_ul {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_title li {
+  list-style: none;
+  width: 195px;
+  height: 40px;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 ul {
@@ -306,6 +363,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 10px;
 }
 
 .must_see .m_wrap .snap_up ul li {
@@ -376,6 +434,64 @@ ul {
   height: 300px;
   background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/81/1599118580733_980x580_90.png);
   background-size: 100% 100%;
+  position: relative;
+}
+
+.must_see .m_wrap .ranking_list ul {
+  height: 280px;
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.must_see .m_wrap .ranking_list ul li {
+  width: 147px;
+  height: 210px;
+  margin-right: 10px;
+  background: #eee;
+}
+
+.must_see .m_wrap .ranking_list ul li div {
+  width: 100%;
+  height: 186px;
+  z-index: 0;
+  position: relative;
+}
+
+.must_see .m_wrap .ranking_list ul li div img {
+  width: 100%;
+  height: 100%;
+}
+
+.must_see .m_wrap .ranking_list ul li div span {
+  position: absolute;
+  bottom: 10px;
+  left: 21px;
+  z-index: 2;
+  width: 104px;
+  height: 18px;
+}
+
+.must_see .m_wrap .ranking_list ul li aside {
+  z-index: 1;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+}
+
+.must_see .m_wrap .ranking_list ul li aside span {
+  color: #fff;
+  background: #f10180;
+  padding: 2px;
+  position: absolute;
+  right: 10px;
 }
 
 .must_see .low_price {
@@ -383,11 +499,81 @@ ul {
   height: 298px;
   background: url(http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/18/152/1600421099298_2000x596_90.png);
   background-size: 100% 100%;
+  position: relative;
+}
+
+.must_see .low_price ul {
+  height: 250px;
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
+.must_see .low_price ul li {
+  width: 147px;
+  height: 210px;
+  margin-right: 10px;
+}
+
+.must_see .low_price ul li aside {
+  z-index: 1;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.must_see .low_price ul li aside span {
+  color: #fff;
+  background: #f10180;
+  padding: 2px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.must_see .low_price ul div {
+  width: 100%;
+  height: 186px;
+  z-index: 0;
+  position: relative;
+}
+
+.must_see .low_price ul div img {
+  width: 145px;
+  height: 145px;
+}
+
+.must_see .low_price ul div article {
+  position: absolute;
+  bottom: 20px;
+  left: 21px;
+  z-index: 1;
+  width: 105px;
+  height: 64px;
+  background: #fff;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.must_see .low_price ul div article img {
+  margin-top: 5px;
+  z-index: 2;
+  width: 68px;
+  height: 35px;
 }
 
 .update {
   margin: 0 auto;
   width: 1000px;
+  margin-top: 30px;
   height: 68px;
   background: url(http://a.vpimg4.com/upload/dop/2019/05/23/58/today_DDp.png);
   background-size: 100% 100%;

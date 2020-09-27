@@ -7,6 +7,20 @@
     <meta name="description" content="唯品会vip购物网以1-7折超低折扣对全球各大品牌进行限时特卖，商品囊括服装、化妆品、家居、奢侈品等上千品牌。100%正品、低价、货到付款、7天无理由退货。" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="../font/iconfont.css">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- <script src="./script/inedx.js"></script> -->
+    <script>
+        $woman_conteng = $(".woman_content");
+        $.ajax({
+            type: "POST",
+            url: "some.php",
+            data: "name=John&location=Boston",
+            success: function(msg) {
+                alert("Data Saved: " + msg);
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -27,7 +41,12 @@
                 <li>/&nbsp&nbsp&nbsp&nbsp我的订单</li>
                 <li>/&nbsp&nbsp&nbsp&nbsp<span class="iconfont icon-lihe"></span>签到有礼</li>
                 <li>/&nbsp&nbsp&nbsp&nbsp注册</li>
-                <li>/&nbsp&nbsp&nbsp&nbsp请登录</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp请登录
+                    <div>
+
+                    </div>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -110,23 +129,45 @@
 
     <!-- 轮播图 -->
     <div class="banner">
-        <img src="" alt="">
-    </div>
-    <div class="banner_title">
+        <div class="wrap">
+            <ul class="banner_ul">
+                <li>
+                    <img class="img1" src="http://a.vpimg2.com/upload/flow/2020/09/24/57/16009177626802.jpg" alt="">
+                </li>
+                <li>
+                    <img class="img2" src="http://a.vpimg2.com/upload/flow/2020/09/25/80/16010286744719.jpg" alt="">
+                </li>
+            </ul>
+
+            <div class="banner_title">
+                <ul class="banner_title_ul">
+                    <li>
+                        the north face大牌特卖 全场...
+                    </li>
+                    <li>
+                        雅莹集团大牌特卖 全场5折封顶
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
 
     </div>
+
 
 
     <!-- 新增布局 -->
     <div class="newimg">
-        <img src="http://a.appsimg.com/upload/flow/2020/09/24/84/16009148440741.jpg.webp" alt="">
+        <img src="http://a.appsimg.com/upload/flow/2020/09/25/183/16010290440226.jpg.webp" alt="">
     </div>
 
 
     <div class="new">
-        <img src="http://a.appsimg.com/upload/flow/2020/09/24/168/16009149104902.jpg.webp" alt="">
-        <img src="https://a.appsimg.com/upload/flow/2020/09/24/43/16009149605269.jpg.webp" alt="">
-        <img src="https://a.appsimg.com/upload/flow/2020/09/24/95/16009150163779.jpg.webp" alt="">
+        <img src="http://a.appsimg.com/upload/flow/2020/09/25/140/16010295514109.jpg.webp" alt="">
+        <img src="http://a.appsimg.com/upload/flow/2020/09/25/47/16010294663964.jpg.webp" alt="">
+        <img src="http://a.appsimg.com/upload/flow/2020/09/25/165/16010295954872.jpg.webp" alt="">
 
     </div>
     <!-- 每日必看专区 -->
@@ -172,11 +213,97 @@
 
             </div>
             <div class="ranking_list">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/09/22/49/e81e75ce-5627-4c63-b866-f99a992c7d5c_420_531_292x372_90.jpg" alt="">
+                            <span><img src="http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/192/1599118711742_208x38_90.png" alt=""></span>
 
+                        </div>
+                        <aside>热销风衣<span>榜</span></aside>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/09/22/49/e81e75ce-5627-4c63-b866-f99a992c7d5c_420_531_292x372_90.jpg" alt="">
+                            <span><img src="http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/192/1599118711742_208x38_90.png" alt=""></span>
+
+                        </div>
+                        <aside>热销风衣<span>榜</span></aside>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/09/22/49/e81e75ce-5627-4c63-b866-f99a992c7d5c_420_531_292x372_90.jpg" alt="">
+                            <span><img src="http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/192/1599118711742_208x38_90.png" alt=""></span>
+
+                        </div>
+                        <aside>热销风衣<span>榜</span></aside>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="low_price">
+            <ul>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
 
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
+
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
+
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
+
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
+
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
+
+                        <article>
+                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
+                        </article>
+                    </div>
+                    <aside><span>特卖价</span>￥159</aside>
+                </li>
+            </ul>
         </div>
     </div>
     <!-- 新特卖每日早十晚八上新 -->
