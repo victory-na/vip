@@ -8,7 +8,7 @@
     color: #fff;
     font-size: 14px;
     .iconfont {
-        font-size: 26px;
+        font-size: 23px;
     }
     .icon-youhuiquan,
     .icon-lishijilu {
@@ -28,9 +28,10 @@
             background: $color;
         }
     }
-    p {
-        font-size: 35px;
-        margin-top: 50px;
+    div {
+        position: absolute;
+        bottom: 10px;
+        left: 2px;
     }
 }
 

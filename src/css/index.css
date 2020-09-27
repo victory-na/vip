@@ -198,25 +198,34 @@ ul {
   align-items: center;
 }
 
-.navigation {
+.navigation, .navigation2 {
   margin: 0 auto;
   width: 1000px;
   height: 43px;
 }
 
-.navigation li {
+.navigation ul > li, .navigation2 ul > li {
   height: 100%;
   line-height: 43px;
   padding: 0 15px;
 }
 
-.navigation .sp, .navigation .sp ul {
+.navigation .nav_list > li:hover:not(.sp), .navigation2 .nav_list > li:hover:not(.sp) {
+  color: #f10180;
+  cursor: pointer;
+}
+
+.navigation .sp, .navigation2 .sp, .navigation .sp .sp_ul, .navigation2 .sp .sp_ul {
   background: #f10180;
   color: #fff;
   position: relative;
 }
 
-.navigation .sp ul {
+.navigation .sp span, .navigation2 .sp span, .navigation .sp .sp_ul span, .navigation2 .sp .sp_ul span {
+  font-size: 10px;
+}
+
+.navigation .sp .sp_ul, .navigation2 .sp .sp_ul {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -226,17 +235,88 @@ ul {
   position: absolute;
   left: 0;
   top: 43px;
+  z-index: 22;
+  font-size: 12px;
 }
 
-.navigation .first {
+.navigation .sp .sp_ul li, .navigation2 .sp .sp_ul li {
+  width: 87px;
+}
+
+.navigation .sp .sp_ul .sp_li_hover, .navigation2 .sp .sp_ul .sp_li_hover {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  width: 900px;
+  height: 473px;
+  display: none;
+  background: #eee;
+  z-index: 222;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_left, .navigation2 .sp .sp_ul .sp_li_hover .hover_left {
+  height: 100%;
+  width: 600px;
+  position: absolute;
+  top: 0;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_left ul, .navigation2 .sp .sp_ul .sp_li_hover .hover_left ul {
+  width: 600px;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  padding-left: 20px;
+  position: absolute;
+  top: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_left ul li, .navigation2 .sp .sp_ul .sp_li_hover .hover_left ul li {
+  height: 43px;
+  width: 100%;
+  display: flex;
+  flex-direction: raw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_left ul li .iconfont, .navigation2 .sp .sp_ul .sp_li_hover .hover_left ul li .iconfont {
+  position: absolute;
+  left: 100px;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_left ul li p, .navigation2 .sp .sp_ul .sp_li_hover .hover_left ul li p {
+  color: #555;
+  position: absolute;
+  left: 150px;
+}
+
+.navigation .sp .sp_ul .sp_li_hover .hover_right, .navigation2 .sp .sp_ul .sp_li_hover .hover_right {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+}
+
+.navigation .active, .navigation2 .active {
+  color: #f10180;
+  background: #fff;
+}
+
+.navigation .first, .navigation2 .first {
   color: #f10180;
 }
 
-.navigation .last {
+.navigation .last, .navigation2 .last {
   position: relative;
 }
 
-.navigation .last ul {
+.navigation .last ul, .navigation2 .last ul {
   background: #fff;
   color: #000;
   width: 100%;
@@ -245,9 +325,27 @@ ul {
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 25;
   position: absolute;
   left: 0;
   top: 43px;
+}
+
+.navigation .last:hover .last_ul, .navigation2 .last:hover .last_ul {
+  display: block;
+}
+
+.navigation .last:hover li:hover, .navigation2 .last:hover li:hover {
+  color: #f10180;
+  cursor: pointer;
+}
+
+.navigation2 {
+  position: fixed;
+  left: 175px;
+  top: -45px;
+  background: #fff;
+  z-index: 99999;
 }
 
 .banner {
@@ -603,8 +701,46 @@ ul {
 }
 
 .woman .woman_content, .shoe .woman_content, .man .woman_content, .sport .woman_content {
-  height: 150px;
-  background: blue;
+  width: 1000px;
+  margin-top: 50px;
+}
+
+.woman .woman_content ul, .shoe .woman_content ul, .man .woman_content ul, .sport .woman_content ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+
+.woman .woman_content ul li, .shoe .woman_content ul li, .man .woman_content ul li, .sport .woman_content ul li {
+  width: 490px;
+  height: 333px;
+  margin-left: 10px;
+}
+
+.woman .woman_content ul li img, .shoe .woman_content ul li img, .man .woman_content ul li img, .sport .woman_content ul li img {
+  width: 490px;
+  height: 235px;
+}
+
+.woman .woman_content ul li h3, .shoe .woman_content ul li h3, .man .woman_content ul li h3, .sport .woman_content ul li h3 {
+  line-height: 40px;
+  width: 490px;
+  height: 40px;
+}
+
+.woman .woman_content ul li p, .shoe .woman_content ul li p, .man .woman_content ul li p, .sport .woman_content ul li p {
+  line-height: 30px;
+  width: 490px;
+  height: 43px;
+}
+
+.woman .woman_content ul li p span, .shoe .woman_content ul li p span, .man .woman_content ul li p span, .sport .woman_content ul li p span {
+  color: #f10180;
+  font-weight: bolder;
 }
 
 .woman .woman_footer, .shoe .woman_footer, .man .woman_footer, .sport .woman_footer {
@@ -714,7 +850,7 @@ ul {
 }
 
 .sidebar .iconfont {
-  font-size: 26px;
+  font-size: 23px;
 }
 
 .sidebar .icon-youhuiquan,
@@ -742,9 +878,10 @@ ul {
   background: #f10180;
 }
 
-.sidebar p {
-  font-size: 35px;
-  margin-top: 50px;
+.sidebar div {
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
 }
 
 .louti {

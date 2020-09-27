@@ -2,25 +2,15 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>唯品会（原Vipshop.com）特卖会：品牌特卖_确保正品_确保低价_货到付款</title>
     <meta name="keywords" content="唯品会,vip,打折,品牌折扣,限时抢购,特卖" />
     <meta name="description" content="唯品会vip购物网以1-7折超低折扣对全球各大品牌进行限时特卖，商品囊括服装、化妆品、家居、奢侈品等上千品牌。100%正品、低价、货到付款、7天无理由退货。" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="../font/iconfont.css">
 
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
-    <!-- <script src="./script/inedx.js"></script> -->
-    <script>
-        $woman_conteng = $(".woman_content");
-        $.ajax({
-            type: "POST",
-            url: "some.php",
-            data: "name=John&location=Boston",
-            success: function(msg) {
-                alert("Data Saved: " + msg);
-            }
-        });
-    </script>
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="index-module"></script>
+
 </head>
 
 <body>
@@ -85,20 +75,120 @@
     </header>
     <!-- 导航栏 -->
     <nav class="navigation">
-        <ul>
-            <li class="sp">商品分类
-                <ul>
-                    <li>111111</li>
-                    <li>222222</li>
-                    <li>33333</li>
-                    <li>4444</li>
-                    <li>5555</li>
-                    <li>6666</li>
-                    <li>7777</li>
-                    <li>8888</li>
-                    <li>9999</li>
-                    <li>00000</li>
-                    <li>11111</li>
+        <ul class="nav_list">
+            <li class="sp">
+                <span class="iconfont icon-liebiaofenlei"></span>商品分类
+                <ul class="sp_ul">
+                    <li class="sp_ul_li">女装/男装/内衣
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">女鞋/男鞋/箱包
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">护肤彩妆个护
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">运动户外
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">家电数码
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">母婴童装
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">手表配饰
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">居家用品
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品奢
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">医药生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
                 </ul>
             </li>
             <li class="first">首页</li>
@@ -113,20 +203,161 @@
             <li>鞋包</li>
             <li>男装</li>
             <li class="last">更多
-                <ul>
-                    <li>111111</li>
-                    <li>222222</li>
-                    <li>33333</li>
-                    <li>4444</li>
-                    <li>5555</li>
-                    <li>6666</li>
-                    <li>7777</li>
+                <ul class="last_ul">
+                    <li>运动</li>
+                    <li>家居</li>
+                    <li>生活</li>
+                    <li>配饰</li>
+                    <li>唯品</li>
+                    <li>扶贫</li>
+
                 </ul>
             </li>
         </ul>
 
     </nav>
+    <nav class="navigation2">
+        <ul class="nav_list">
+            <li class="sp">
+                <span class="iconfont icon-liebiaofenlei"></span>商品分类
+                <ul class="sp_ul">
+                    <li class="sp_ul_li">女装/男装/内衣
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
 
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">女鞋/男鞋/箱包
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">护肤彩妆个护
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">运动户外
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">家电数码
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">母婴童装
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">手表配饰
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">居家用品
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品奢
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">医药生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="first">首页</li>
+            <li>最后疯抢</li>
+            <li>唯品快抢</li>
+            <li>品牌清仓</li>
+            <li>女装</li>
+            <li>母婴</li>
+            <li>家电</li>
+            <li>国际</li>
+            <li>美妆</li>
+            <li>鞋包</li>
+            <li>男装</li>
+            <li class="last">更多
+                <ul class="last_ul">
+                    <li>运动</li>
+                    <li>家居</li>
+                    <li>生活</li>
+                    <li>配饰</li>
+                    <li>唯品</li>
+                    <li>扶贫</li>
+
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
     <!-- 轮播图 -->
     <div class="banner">
         <div class="wrap">
@@ -224,85 +455,26 @@
                     </li>
                     <li>
                         <div>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/09/22/49/e81e75ce-5627-4c63-b866-f99a992c7d5c_420_531_292x372_90.jpg" alt="">
-                            <span><img src="http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/192/1599118711742_208x38_90.png" alt=""></span>
+                            <img src="https://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/07/16/16/31a7ff06-2c3d-4025-b165-4b5cc451e484_420_531_292x372_90.jpg" alt="">
+                            <span><img src="https://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/07/83/1599462808716_208x38_90.png" alt=""></span>
 
                         </div>
-                        <aside>热销风衣<span>榜</span></aside>
+                        <aside>女士卫衣<span>榜</span></aside>
                     </li>
                     <li>
                         <div>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2020/09/22/49/e81e75ce-5627-4c63-b866-f99a992c7d5c_420_531_292x372_90.jpg" alt="">
-                            <span><img src="http://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/03/192/1599118711742_208x38_90.png" alt=""></span>
+                            <img src="https://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/612389/2020/0908/128/8571718e-50e1-4598-8894-6756cea3d23b_420_531_292x372_90.jpg" alt="">
+                            <span><img src="https://h2.appsimg.com/b.appsimg.com/upload/momin/2020/09/07/196/1599462820144_208x38_90.png" alt=""></span>
 
                         </div>
-                        <aside>热销风衣<span>榜</span></aside>
+                        <aside>女式针织衫<span>榜</span></aside>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="low_price">
             <ul>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
 
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
-
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
-
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
-
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
-
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
-                <li>
-                    <div>
-                        <img src="http://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/105940/2020/0417/166/4905155f-91f6-4dde-8bee-aa9947439986_290x290_90.jpg" alt="">
-
-                        <article>
-                            <img src="http://h2.appsimg.com/a.appsimg.com/upload/brandcool/0/fb9effec5b464f05b571926615023ebb/10004328/primary_136x70_90.png" alt="">
-                        </article>
-                    </div>
-                    <aside><span>特卖价</span>￥159</aside>
-                </li>
             </ul>
         </div>
     </div>
@@ -316,7 +488,9 @@
             <a href="">更多女装 ></a>
         </div>
         <div class="woman_content">
+            <ul>
 
+            </ul>
         </div>
         <div class="woman_footer">
             逛更多女装品牌
@@ -330,7 +504,7 @@
             <a href="">更多鞋包 ></a>
         </div>
         <div class="woman_content">
-
+            <ul></ul>
         </div>
         <div class="woman_footer">
             逛更多鞋包品牌
@@ -343,7 +517,7 @@
             <a href="">更多男装 ></a>
         </div>
         <div class="woman_content">
-
+            <ul></ul>
         </div>
         <div class="woman_footer">
             逛更多男装品牌
@@ -356,7 +530,7 @@
             <a href="">更多运动 ></a>
         </div>
         <div class="woman_content">
-
+            <ul></ul>
         </div>
         <div class="woman_footer">
             逛更多运动品牌
@@ -438,7 +612,11 @@
             <li><span class="iconfont icon-lishijilu
             "></span></li>
         </ul>
-        <p>^</p>
+        <div>
+            <span class="iconfont icon-bi"></span>
+            <span class="iconfont icon-up2"></span>
+        </div>
+
     </div>
 
     <!-- 楼梯 -->

@@ -10,8 +10,36 @@
         @include display( row, space-between, center);
     }
     .woman_content {
-        height: 150px;
-        background: blue;
+        // @include wh(1000px, 700px);
+        width: 1000px;
+        margin-top: 50px;
+        // background: blue;
+        ul {
+            margin-top: 20px;
+            @include display(row, space-between, flex-start);
+            flex-wrap: wrap;
+            width: 1000px;
+            // @include wh(1000px, 700px);
+            li {
+                @include wh(490px, 333px);
+                margin-left: 10px;
+                img {
+                    @include wh(490px, 235px);
+                }
+                h3 {
+                    line-height: 40px;
+                    @include wh(490px, 40px);
+                }
+                p {
+                    line-height: 30px;
+                    @include wh(490px, 43px);
+                    span {
+                        color: $color;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
     }
     .woman_footer {
         @include wh(324px, 44px);

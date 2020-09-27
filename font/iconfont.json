@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1002195",
+      "name": "笔",
+      "font_class": "bi",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "13386532",
+      "name": "列表分类",
+      "font_class": "liebiaofenlei",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "13712860",
+      "name": "向上",
+      "font_class": "up21",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "14325986",
+      "name": "向上",
+      "font_class": "up",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "14546414",
+      "name": "向上",
+      "font_class": "left",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "16713571",
+      "name": "向上",
+      "font_class": "up2",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
       "icon_id": "139466",
       "name": "母婴",
       "font_class": "muying",

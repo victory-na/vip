@@ -4,16 +4,23 @@
     @include auto();
     height: 43px;
     // background: gold;
-    li {
+    ul>li {
         height: $h;
         line-height: 43px;
         padding: 0 15px;
+    }
+    .nav_list>li:hover:not(.sp) {
+        color: $color;
+        cursor: pointer;
     }
     .sp {
         background: $color;
         color: #fff;
         position: relative;
-        ul {
+        span {
+            font-size: 10px;
+        }
+        .sp_ul {
             @extend .sp;
             width: 100%;
             @include display(column, center, center);
@@ -21,8 +28,71 @@
             position: absolute;
             left: 0;
             top: 43px;
+            z-index: 22;
+            font-size: $fs;
+            li {
+                width: 87px;
+            }
+            .sp_li_hover {
+                position: absolute;
+                top: 0px;
+                left: $h;
+                width: 900px;
+                height: 473px;
+                display: none;
+                background: #eee;
+                z-index: 222;
+                .hover_left {
+                    height: $h;
+                    width: 600px;
+                    position: absolute;
+                    top: 0;
+                    ul {
+                        width: 600px;
+                        height: $h;
+                        background: #fff;
+                        color: #000;
+                        padding-left: 20px;
+                        position: absolute;
+                        top: 1px;
+                        @include display(column, flex-start, flex-start);
+                        li {
+                            height: 43px;
+                            width: $h;
+                            @include display(raw, flex-start, center);
+                            .iconfont {
+                                position: absolute;
+                                left: 100px;
+                            }
+                            p {
+                                color: #555;
+                                position: absolute;
+                                left: 150px;
+                            }
+                        }
+                    }
+                }
+                .hover_right {
+                    position: absolute;
+                    right: 10px;
+                    top: 0;
+                    height: $h;
+                    width: 250px;
+                    // background: salmon;
+                }
+            }
         }
     }
+    .active {
+        color: $color;
+        background: #fff;
+    }
+    // .sp:hover {
+    //     color: #fff;
+    //     ul {
+    //         display: block;
+    //     }
+    // }
     .first {
         color: $color;
     }
@@ -34,9 +104,32 @@
             width: 100%;
             @include display(column, center, center);
             display: none;
+            z-index: 25;
             position: absolute;
             left: 0;
             top: 43px;
         }
     }
+    .last:hover {
+        .last_ul {
+            display: block;
+        }
+        li:hover {
+            color: $color;
+            cursor: pointer;
+        }
+    }
+}
+
+.navigation2 {
+    position: fixed;
+    left: 175px;
+    top: -45px;
+    background: #fff;
+    z-index: 99999;
+    @extend .navigation;
+    // .sp_li_hover {
+    //     position: fixed;
+    //     top: 50px;
+    // }
 }
