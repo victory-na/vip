@@ -19,19 +19,124 @@
         @include display(column, center, center);
         flex-wrap: wrap;
         li {
+            width: $h;
             margin: 10px 0;
             text-align: center;
             margin-top: 5px;
+            position: relative;
+            div {
+                width: 100px;
+                height: 40px;
+                background: #fff;
+                color: #000;
+                border: solid 1px #aaa;
+                position: absolute;
+                left: -102px;
+                top: 0;
+                line-height: 40px;
+                display: none;
+            }
         }
+        .user div {
+            width: 250px;
+            height: 300px;
+            display: none;
+            left: -252px;
+            z-index: 999;
+            .close {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+            }
+            img {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 40px;
+                left: 90px;
+                border-radius: 50%;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                @include display(row, center, center)
+            }
+            .login {
+                width: $h;
+                position: absolute;
+                top: 110px;
+                li {
+                    position: absolute;
+                    top: 0;
+                    left: 100;
+                    padding: 0 4px;
+                }
+            }
+            .dd {
+                width: $h;
+                height: 100px;
+                border: 1px solid #999;
+                position: absolute;
+                background: #eee;
+                top: 150px;
+                @include display();
+                aside {
+                    width: $h/2;
+                    height: 90px;
+                    @include display(column, center, center);
+                }
+            }
+        }
+        // .user:hover div {
+        //     display: block;
+        // }
         .cart {
             padding: 10px 0;
             background: $color;
         }
+        .quan:hover div {
+            display: block;
+        }
+        .pinpai:hover div {
+            display: block;
+        }
+        .shangpin:hover div {
+            display: block;
+        }
+        .zuji:hover div {
+            display: block;
+        }
     }
     div {
+        height: 70px;
         position: absolute;
-        bottom: 10px;
+        bottom: 20px;
         left: 2px;
+        @include display(column, space-between, center);
+        span {
+            position: relative;
+        }
+        div {
+            width: 100px;
+            height: 40px;
+            background: #fff;
+            color: #000;
+            border: solid 1px #aaa;
+            position: absolute;
+            left: -102px;
+            top: 0;
+            line-height: 40px;
+            font-size: 14px;
+            display: none;
+            text-align: center;
+        }
+        .icon-bi:hover div {
+            display: block;
+        }
+        .icon-up2:hover div {
+            display: block;
+        }
     }
 }
 

@@ -65,10 +65,12 @@
                                 position: absolute;
                                 left: 100px;
                             }
-                            p {
+                            a {
                                 color: #555;
                                 position: absolute;
                                 left: 150px;
+                                cursor: pointer;
+                                text-decoration: none;
                             }
                         }
                     }

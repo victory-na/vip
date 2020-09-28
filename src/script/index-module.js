@@ -7,7 +7,7 @@ define([], function() {
             ! function() { // console.log($woman_content);
                 // $woman_content.html("111");
                 $.ajax({ //数据渲染
-                    url: 'http://localhost/vip/php/index_pinpai.php',
+                    url: 'http://192.168.13.69/vip/php/index_pinpai.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // let $data = data;
@@ -26,7 +26,7 @@ define([], function() {
 
                 });
                 $.ajax({
-                    url: 'http://localhost/vip/php/index_top.php',
+                    url: 'http://192.168.13.69/vip/php/index_top.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // let $data = data;
@@ -55,7 +55,7 @@ define([], function() {
             ! function() {
                 const $ul = $(".hover_left ul");
                 $.ajax({
-                    url: 'http://localhost/vip/php/twolist.php',
+                    url: 'http://192.168.13.69/vip/php/twolist.php',
                     dataType: 'json'
                 }).done((data) => {
                     let $data = data;
@@ -68,13 +68,13 @@ define([], function() {
                         if (index % 2 == 0) {
                             $strhtml += `
                             <li>${value.btitle}<span class="iconfont icon-up"></span>
-                            <p>`;
+                            <a href="http://192.168.13.69/vip/src/list.html">`;
                             $.each(arr, function(index, value) {
                                 $strhtml += `
                                 <span>${value}</span>
                                 `;
                             });
-                            $strhtml += `</p></li>`;
+                            $strhtml += `</a></li>`;
                         }
                     });
                     // console.log($strhtml);
@@ -233,9 +233,19 @@ define([], function() {
                     // console.log($loutitop);
                     $('html,body').scrollTop($loutitop)
                 });
-
+                $(".icon-up2").on("click", function() {
+                    $('html,body').scrollTop(0)
+                });
             }();
-
+            $(".user").on("mouseover", function() {
+                $(".user div").show();
+            });
+            $(".user").on("mouseout", function() {
+                $(".user div").hide();
+            });
+            $(".close").on("click", function() {
+                $(".user div").hide();
+            })
         }
     }
 });
