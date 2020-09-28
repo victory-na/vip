@@ -14,6 +14,38 @@
             position: absolute;
             top: 50px;
             left: 200px;
+            >li {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            .left {
+                @include wh(50px, 70px);
+                position: absolute;
+                left: 20px;
+                top: 120px;
+                line-height: 70px;
+                text-align: center;
+                display: block;
+                background: #eee;
+                opacity: 0.7;
+                color: #333;
+                z-index: 333;
+                display: none;
+                .iconfont {
+                    font-size: 28px;
+                }
+            }
+            div:hover {
+                background: #999;
+                opacity: 0.8;
+                color: #eee;
+            }
+            .right {
+                @extend .left;
+                position: absolute;
+                left: 860px;
+            }
         }
         li {
             list-style: none;
@@ -23,8 +55,8 @@
             img {
                 @include wh(936px, 320px);
             }
-            .img2 {
-                display: none;
+            .img1 {
+                z-index: 2;
             }
         }
     }
@@ -42,5 +74,11 @@
             @include wh(195px, 40px);
             font-size: $fs;
             overflow: hidden;
+            // background-color: sandybrown;
+            color: #333;
+        }
+        .style {
+            color: #000;
+            border-bottom: 3px solid $color;
         }
     }

@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "base";
 .navigation {
+    z-index: 33;
     @include auto();
     height: 43px;
     // background: gold;
@@ -121,15 +122,15 @@
     }
 }
 
-.navigation2 {
+.nav {
+    width: $h;
     position: fixed;
-    left: 175px;
+    left: 0;
     top: -45px;
     background: #fff;
     z-index: 99999;
-    @extend .navigation;
-    // .sp_li_hover {
-    //     position: fixed;
-    //     top: 50px;
-    // }
+    @include display();
+    .navigation2 {
+        @extend .navigation;
+    }
 }

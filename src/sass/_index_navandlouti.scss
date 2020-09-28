@@ -40,13 +40,13 @@
     // background-color: darkgray;
     @include border(1px, solid, #aaa);
     border-radius: 5px;
-    @include wh( 78px, 370px);
     position: fixed;
     left: 50px;
     top: 100px;
     @include display(column, space-between, center);
     padding: 5px 0;
     font-size: 14px;
+    display: none;
     li {
         text-align: center;
         line-height: 31px;
@@ -54,5 +54,9 @@
         @include wh( 70px, 31px);
         @include display(row, space-around, center);
         // background-color: darkmagenta;
+    }
+    .active {
+        color: #fff;
+        background: $color;
     }
 }
