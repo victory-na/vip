@@ -4,11 +4,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>商品列表页</title>
+    <link rel="stylesheet" href="./css/list.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="list-module"></script>
+    <link rel="stylesheet" href="./../font/iconfont.css">
+    <link rel="stylesheet" href="./../src/css/pagination.css">
 </head>
 
 <body>
-    这里就是列表页
+
+    <!-- 顶部链接 -->
+    <nav class="top_nav">
+        <div class="wrap">
+            <div class="area">
+                <span>杭州市 
+                </span>
+            </div>
+
+            <ul>
+                <li>/&nbsp&nbsp&nbsp&nbsp更多</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp<span class="iconfont icon-shouji"></span>手机版</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp客户服务</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp会员俱乐部</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp我的特卖</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp我的订单</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp<span class="iconfont icon-lihe"></span>签到有礼</li>
+                <li>/&nbsp&nbsp&nbsp&nbsp <a href="http://192.168.13.69/vip/src/registry.html">注册</a> </li>
+                <li>/&nbsp&nbsp&nbsp&nbsp <a href="http://192.168.13.69/vip/src/login.html">请登录</a>
+                    <div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- 搜索框logo栏 -->
+    <header class="header">
+        <a href="http://192.168.13.69/vip/src/"><img src="http://b.appsimg.com/upload/momin/2020/06/16/82/1592278113502.png" alt="">
+        </a>
+
+        <ul class="title">
+            <li><span class="iconfont icon-zhengpin"></span>100%正品</li>
+            <li><span class="iconfont icon-serviceman88baoyou
+                "></span>88包邮</li>
+            <li><span class="iconfont icon-7tiantuihuan
+                "></span>退换无忧</li>
+        </ul>
+        <div class="search">
+            <div class="search_from">
+                <input type="text">
+                <div class="button">
+                    <span class="iconfont icon-sou
+                "></span>
+                </div>
+            </div>
+            <ul class="search_list">
+                <li class="first">护肤套装</li>
+                <li>女靴</li>
+                <li>女士风衣</li>
+                <li>女休闲鞋</li>
+                <li>男皮夹克</li>
+            </ul>
+        </div>
+        <div class="cart">
+            <span class="iconfont icon-gouwudai
+            "></span> 购物袋
+            <span class="num">0</span>
+
+        </div>
+    </header>
+    <!-- 导航栏 -->
+    <nav class="navigation">
+        <ul class="nav_list">
+            <li class="sp">
+                <span class="iconfont icon-liebiaofenlei"></span>商品分类
+                <ul class="sp_ul">
+                    <li class="sp_ul_li">女装/男装/内衣
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">女鞋/男鞋/箱包
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">护肤彩妆个护
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">运动户外
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">家电数码
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">母婴童装
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">手表配饰
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">居家用品
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">唯品奢
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                    <li class="sp_ul_li">医药生活
+                        <div class="sp_li_hover">
+                            <div class="hover_left">
+                                <ul>
+                                </ul>
+                            </div>
+
+                            <div class="hover_right"></div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="first">首页</li>
+            <li>最后疯抢</li>
+            <li>唯品快抢</li>
+            <li>品牌清仓</li>
+            <li>女装</li>
+            <li>母婴</li>
+            <li>家电</li>
+            <li>国际</li>
+            <li>美妆</li>
+            <li>鞋包</li>
+            <li>男装</li>
+            <li class="last">更多
+                <ul class="last_ul">
+                    <li>运动</li>
+                    <li>家居</li>
+                    <li>生活</li>
+                    <li>配饰</li>
+                    <li>唯品</li>
+                    <li>扶贫</li>
+
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="button">
+        <button>默认排序</button>
+        <button>升序排序</button>
+        <button>降序排序</button>
+    </div>
+
+    <!-- 渲染数据的结构 -->
+    <div class="list">
+        <!-- <ul class="wrap_ul">
+
+        </ul> -->
+    </div>
+    <!-- 分页的结构 -->
+    <div class="pagelist">
+        <div class="m-style page">
+        </div>
+    </div>
 </body>
 
 </html>

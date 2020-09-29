@@ -1,0 +1,311 @@
+  @charset "utf-8";
+  @import "base";
+  .top_nav {
+      font-size: $fs;
+      background-color: $b;
+      @include wh($h, 30px);
+      color: #777;
+      @include display();
+      // display: flex;
+      // justify-content: center;
+      .wrap {
+          @include wh( 1000px, $h);
+          @include display(row, space-between, center);
+          .area {
+              @include display( row, space-between, center);
+              width: 86px;
+          }
+          ul {
+              height: $h;
+              list-style: none;
+              @include display(row-reverse, space-between, center);
+              li {
+                  padding: 0 5px;
+                  .icon-lihe {
+                      color: $color;
+                  }
+              }
+          }
+      }
+  }
+  
+  .header {
+      //头部
+      @include auto();
+      height: 100px;
+      color: #333;
+      // background: red;
+      @include display(row, space-between, center);
+      //弹性盒函数调用
+      a>img {
+          //logo图片
+          height: 100px;
+      }
+      .title {
+          //服务标题列表
+          height: $h;
+          list-style: none;
+          @include display(row, space-between, center);
+          li {
+              height: $h;
+              font-size: $fs+3;
+              padding: 0 10px;
+              color: #999;
+              line-height: 100px;
+              .iconfont {
+                  color: $color;
+                  font-size: $fs+8;
+              }
+          }
+      }
+      .search {
+          //搜索框
+          width: 391px;
+          height: 100%;
+          @include display(column, center, center);
+          .search_from {
+              //搜索框主体
+              height: 32px;
+              width: 100%;
+              @include border(2px, solid, $color);
+              @include display(row, space-between, center);
+              // background: darkcyan;
+              input {
+                  //输入框
+                  height: $h*0.8;
+                  width: 340px;
+                  border-style: none;
+              }
+              .button {
+                  //搜索按钮
+                  background: $color;
+                  width: 53px;
+                  height: $h;
+                  color: #fff;
+                  text-align: center;
+                  .icon-sou {
+                      font-size: 25px;
+                  }
+              }
+          }
+          .search_list {
+              //搜索框底部的列表
+              @include display(row, space-between, center);
+              color: #999;
+              margin-top: 3px;
+              li {
+                  padding: 0 13px;
+                  border-left: 1px solid #999;
+                  font-size: $fs;
+              }
+              .first {
+                  border: none;
+              }
+          }
+      }
+      .cart {
+          width: 96px;
+          height: 32px;
+          color: #333;
+          @include border(1px, solid, #aaa);
+          background-color: rgb(243, 243, 243);
+          margin-bottom: 20px;
+          font-size: 14px;
+          @include display(row, space-around, center);
+          .num {
+              width: 25px;
+              height: 16px;
+              border-radius: 8px;
+              background-color: $color;
+              color: #fff;
+              text-align: center;
+              line-height: 16px;
+          }
+      }
+  }
+  
+  .navigation {
+      z-index: 33;
+      @include auto();
+      height: 43px;
+      // background: gold;
+      ul>li {
+          height: $h;
+          line-height: 43px;
+          padding: 0 15px;
+      }
+      .nav_list>li:hover:not(.sp) {
+          color: $color;
+          cursor: pointer;
+      }
+      .sp {
+          background: $color;
+          color: #fff;
+          position: relative;
+          span {
+              font-size: 10px;
+          }
+          .sp_ul {
+              @extend .sp;
+              width: 100%;
+              @include display(column, center, center);
+              display: none;
+              position: absolute;
+              left: 0;
+              top: 43px;
+              z-index: 22;
+              font-size: $fs;
+              li {
+                  width: 87px;
+              }
+              .sp_li_hover {
+                  position: absolute;
+                  top: 0px;
+                  left: $h;
+                  width: 900px;
+                  height: 473px;
+                  display: none;
+                  background: #eee;
+                  z-index: 222;
+                  .hover_left {
+                      height: $h;
+                      width: 600px;
+                      position: absolute;
+                      top: 0;
+                      ul {
+                          width: 600px;
+                          height: $h;
+                          background: #fff;
+                          color: #000;
+                          padding-left: 20px;
+                          position: absolute;
+                          top: 1px;
+                          @include display(column, flex-start, flex-start);
+                          li {
+                              height: 43px;
+                              width: $h;
+                              @include display(raw, flex-start, center);
+                              .iconfont {
+                                  position: absolute;
+                                  left: 100px;
+                              }
+                              a {
+                                  color: #555;
+                                  position: absolute;
+                                  left: 150px;
+                                  cursor: pointer;
+                                  text-decoration: none;
+                              }
+                          }
+                      }
+                  }
+                  .hover_right {
+                      position: absolute;
+                      right: 10px;
+                      top: 0;
+                      height: $h;
+                      width: 250px;
+                      // background: salmon;
+                  }
+              }
+          }
+      }
+      .active {
+          color: $color;
+          background: #fff;
+      }
+      // .sp:hover {
+      //     color: #fff;
+      //     ul {
+      //         display: block;
+      //     }
+      // }
+      .first {
+          color: $color;
+      }
+      .last {
+          position: relative;
+          ul {
+              background: #fff;
+              color: #000;
+              width: 100%;
+              @include display(column, center, center);
+              display: none;
+              z-index: 25;
+              position: absolute;
+              left: 0;
+              top: 43px;
+          }
+      }
+      .last:hover {
+          .last_ul {
+              display: block;
+          }
+          li:hover {
+              color: $color;
+              cursor: pointer;
+          }
+      }
+  }
+  
+  .button {
+      width: 1020px;
+      margin: 20px auto;
+      @include display(raw, space-around, center)
+  }
+  
+  .list {
+      width: $h;
+      ul {
+          width: 1020px;
+          margin: 0 auto;
+          @include display(raw, flex-start, flex-start);
+          flex-wrap: wrap;
+          li {
+              width: 230px;
+              height: 350px;
+              @include border(1px, solid, #e7e7e7);
+              margin-bottom: 20px;
+              margin-right: 20px;
+              cursor: pointer;
+              img {
+                  width: 230px;
+                  height: 230px;
+              }
+              .price {
+                  text-decoration: none;
+                  width: 210px;
+                  padding: 0 10px;
+                  font-size: 12px;
+                  @include display(row, flex-start, center);
+                  span {
+                      margin-right: 2px;
+                  }
+                  .np {
+                      color: #000;
+                      font-size: 18px;
+                      font-weight: bolder;
+                  }
+              }
+              .price :first-child {
+                  background: $color;
+                  color: #fff;
+                  padding: 2px;
+                  border-radius: 8px;
+              }
+              .price :nth-of-type(3) {
+                  text-decoration: line-through;
+                  color: #999;
+              }
+              .price :nth-of-type(4) {
+                  color: #999;
+              }
+              .title {
+                  padding: 0 10px;
+                  font-size: 12px;
+                  color: #666;
+                  margin-bottom: 50px;
+              }
+          }
+      }
+  }

@@ -16,13 +16,16 @@ define([], function() {
                     $.each(data, function(index, value) {
                         $strhtml += `
                 <li>
-                        <img src="${value.url}" alt="">
+                <img class="lazy" data-original="${value.url}" width="200" height="200"/>
                         <h3>${value.title}</h3>
                         <p><span>${value.zhekou}</span>折封顶</p>
                 </li>`;
                     });
                     // console.log($strhtml);
                     $(" .woman_content ul").html($strhtml);
+                    $(function() {
+                        $("img.lazy").lazyload({ effect: "fadeIn" });
+                    });
 
                 });
                 $.ajax({
