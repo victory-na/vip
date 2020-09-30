@@ -7,7 +7,7 @@ define([], function() {
             ! function() { // console.log($woman_content);
                 // $woman_content.html("111");
                 $.ajax({ //数据渲染
-                    url: 'http://192.168.13.69/vip/php/index_pinpai.php',
+                    url: 'http://192.168.13.36/vip/php/index_pinpai.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // let $data = data;
@@ -29,7 +29,7 @@ define([], function() {
 
                 });
                 $.ajax({
-                    url: 'http://192.168.13.69/vip/php/index_top.php',
+                    url: 'http://192.168.13.36/vip/php/index_top.php',
                     dataType: 'json'
                 }).done(function(data) {
                     // let $data = data;
@@ -58,7 +58,7 @@ define([], function() {
             ! function() {
                 const $ul = $(".hover_left ul");
                 $.ajax({
-                    url: 'http://192.168.13.69/vip/php/twolist.php',
+                    url: 'http://192.168.13.36/vip/php/twolist.php',
                     dataType: 'json'
                 }).done((data) => {
                     let $data = data;
@@ -71,7 +71,7 @@ define([], function() {
                         if (index % 2 == 0) {
                             $strhtml += `
                             <li>${value.btitle}<span class="iconfont icon-up"></span>
-                            <a href="http://192.168.13.69/vip/src/list.html">`;
+                            <a href="http://192.168.13.36/vip/src/list.html">`;
                             $.each(arr, function(index, value) {
                                 $strhtml += `
                                 <span>${value}</span>

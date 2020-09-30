@@ -15,7 +15,7 @@ define([], function() {
                 datasid = 1;
             }
             $.ajax({
-                url: 'http://192.168.13.69/vip/php/getsid.php',
+                url: 'http://192.168.13.36/vip/php/getsid.php',
                 data: {
                     sid: datasid
                 },
@@ -23,8 +23,11 @@ define([], function() {
             }).done((data) => {
                 let objdata = data;
                 $('#smallpic').attr('src', objdata.url); //图片地址
+                $('.pinpai').html(objdata.brand); //品牌
                 $('.loadtitle').html(objdata.title); //标题
-                $('.loadpcp').html(objdata.newprice);
+                $('.loadpcp').html(objdata.newprice); //现在的价格
+                $('.oldprice').html(objdata.oldprice); //原价
+                $('.discount').html(objdata.discount); //折扣
                 $('#bpic').attr('src', objdata.url);
                 //渲染放大镜效果下面的小图
                 let arr = objdata.lurl.split(','); //转数组
@@ -99,14 +102,9 @@ define([], function() {
                 bpic.attr('src', picurl);
             });
 
-            //小图切换的左右箭头。left/right
-            //核心思路：小图的个数有关系
-            let piclen = 6; //显示图片的张图
-            // console.log($('#list ul li').size());//无法获取li的长度,这里无法事件委托
-            // 如果是渲染的结构，无法获取元素对象，可以采用两种方式实现：
-            // 1.事件委托。
-            // 2.封装一个函数，渲染内部进行调用。
+            let piclen = 5; //显示图片的张图
             function hidearrow() { //当li的长度不够6个，隐藏左右箭头
+                console.log($('#list ul li').size());
                 if ($('#list ul li').size() <= piclen) {
                     $('#right').css({
                         color: '#fff'
@@ -115,11 +113,11 @@ define([], function() {
             }
 
             $('#right').on('click', function() {
-                // console.log($('#list ul li').size()); //可以获取li的长度
+
                 let liwidth = $('#list ul li').eq(0).outerWidth(true); //1个li的长度
                 if ($('#list ul li').size() > piclen) {
                     piclen++;
-                    $('#left').css({ //右箭头触发一次，左箭头可以显示。
+                    $('#left').css({
                         color: '#333'
                     });
                     if (piclen === $('#list ul li').size()) { //无法点击右箭头，到底了
@@ -128,7 +126,7 @@ define([], function() {
                         });
                     }
                     $('#list ul').animate({
-                        left: -(piclen - 6) * liwidth
+                        left: -6 * liwidth
                     });
                 }
             });
