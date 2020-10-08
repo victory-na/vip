@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import "base";
+header {
+    height: 100px;
+    .box {
+        @include auto();
+        height: 100px;
+        position: relative;
+        .title {
+            width: 125px;
+            height: 100px;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 500px;
+            background: url(http://member-ssl.vipstatic.com/img/passport/sprites-hash-c9975078.png?4eaaf192) -308px -57px;
+        }
+        .img {
+            background-image: url(//member-ssl.vipstatic.com/img/passport/sprites-hash-c9975078.png?4eaaf192);
+            background-position: 0 0;
+            width: 304px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.body {
+    width: 100%;
+    height: 650px;
+    background: url(https://a.vpimg2.com/upload/flow/2020/09/28/28/16012818429045.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    .login {
+        position: absolute;
+        top: 91px;
+        right: 137px;
+        width: 360px;
+        height: 430px;
+        background: #fff;
+        p {
+            margin-left: 30px;
+            padding: 0;
+            height: 20px;
+            line-height: 20px;
+            font-size: 15px;
+        }
+        nav {
+            color: #333;
+            line-height: 50px;
+            height: 50px;
+            border-bottom: 1px solid #999;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            @include display(raw, space-around, center);
+            span {
+                font-weight: normal;
+                font-size: 15px;
+                color: #000;
+                a {
+                    text-decoration: none;
+                    color: $color;
+                }
+            }
+        }
+        .name,
+        .psw,
+        .repsw {
+            margin: 20px 30px 10px 30px;
+            position: relative;
+            input {
+                border: 1px solid #b2b2b2;
+                border-radius: 3px;
+                padding-left: 40px;
+                width: 248px;
+                height: 32px;
+                line-height: 32px;
+            }
+            .icon1 {
+                background-image: url(http://member-ssl.vipstatic.com/img/passport/sprites-hash-c9975078.png?4eaaf192);
+                background-position: -505px -222px;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 9px;
+                left: 11px;
+                z-index: 1;
+            }
+        }
+        .psw .icon1,
+        .repsw .icon1 {
+            background-position: -528px -222px;
+        }
+        .button {
+            width: 300px;
+            height: 40px;
+            background: $color;
+            margin-left: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            input {
+                width: 300px;
+                height: 40px;
+                color: #fff;
+                border: none;
+                background: $color;
+                line-height: 38px;
+                font-size: 20px;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+    }
+    .icon2 {
+        color: red;
+        display: none;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 9px;
+        right: 11px;
+        z-index: 1;
+    }
+    .other {
+        width: 300px;
+        height: 40px;
+        margin-left: 30px;
+        color: #999;
+        cursor: pointer;
+        @include display(raw, space-around, center);
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}

@@ -282,22 +282,20 @@
             height: 420px;
         }
         #sf {
-            width: 50px;
-            height: 50px;
-            background: orange;
-            opacity: 0.3;
             position: absolute;
             left: 0px;
             top: 0px;
             visibility: hidden;
+            cursor: crosshair;
+            z-index: 110;
         }
         #bf {
-            width: 400px;
-            height: 500px;
-            border: 1px solid #000;
+            width: 420px;
+            height: 420px;
             overflow: hidden;
             position: absolute;
-            left: 410px;
+            top: 0;
+            left: 0px;
             visibility: hidden;
             z-index: 100;
         }
@@ -316,6 +314,7 @@
             height: 56px;
             overflow: hidden;
             #right {
+                cursor: pointer;
                 position: absolute;
                 right: 0px;
                 top: 0px;
@@ -326,6 +325,7 @@
                 height: 64px;
             }
             #left {
+                cursor: pointer;
                 position: absolute;
                 left: 0px;
                 top: 0px;
@@ -380,8 +380,17 @@
             height: 200px;
         }
         .goodsinfo-word {
-            overflow: hidden;
+            // overflow: hidden;
             float: left;
+            position: relative;
+            .joincart {
+                padding: 10px;
+                color: #fff;
+                background: $color;
+                position: absolute;
+                left: 84px;
+                bottom: -50px;
+            }
         }
         .p-name {
             width: 350px;
@@ -417,7 +426,13 @@
         .p-btn {
             margin-left: 50px;
             margin-top: 20px;
+            position: relative;
+            height: 30px;
+            padding: 11px 10px;
             .num-box {
+                position: absolute;
+                left: 40px;
+                top: -25px;
                 width: 90px;
                 position: relative;
                 height: 28px;

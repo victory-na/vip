@@ -1,4 +1,4 @@
-define([], function() {
+define(['jcookie'], function() {
     return {
         init: function() {
             //详情页面：
@@ -61,7 +61,8 @@ define([], function() {
                 //小图内容鼠标移动
                 spic.on('mousemove', function(e) {
                     let left = e.pageX - $('.wrap').offset().left - sf.width() / 2;
-                    let top = e.pageY - $('.wrap').offset().top - sf.height() / 2;
+                    let top = e.pageY - $('.wrap').offset().top - 185 - sf.height() / 2;
+                    // console.log(top);
                     if (left <= 0) {
                         left = 0;
                     } else if (left >= spic.width() - sf.width()) {
@@ -104,29 +105,30 @@ define([], function() {
 
             let piclen = 5; //显示图片的张图
             function hidearrow() { //当li的长度不够6个，隐藏左右箭头
-                console.log($('#list ul li').size());
-                if ($('#list ul li').size() <= piclen) {
+                // console.log($('#list ul li').length);
+                if ($('#list ul li').length <= piclen) {
                     $('#right').css({
-                        color: '#fff'
+                        color: '#fff',
+
                     })
                 }
             }
 
             $('#right').on('click', function() {
-
                 let liwidth = $('#list ul li').eq(0).outerWidth(true); //1个li的长度
-                if ($('#list ul li').size() > piclen) {
-                    piclen++;
+                if ($('#list ul li').length > piclen) {
+                    piclen += 5;
                     $('#left').css({
                         color: '#333'
                     });
-                    if (piclen === $('#list ul li').size()) { //无法点击右箭头，到底了
+                    console.log(piclen);
+                    if (piclen >= $('#list ul li').length) { //无法点击右箭头，到底了
                         $('#right').css({
                             color: '#fff'
                         });
                     }
                     $('#list ul').animate({
-                        left: -6 * liwidth
+                        left: -340
                     });
                 }
             });
@@ -134,63 +136,93 @@ define([], function() {
             //如果左箭头能够进行移动，piclen长度大于6.
             $('#left').on('click', function() {
                 let liwidth = $('#list ul li').eq(0).outerWidth(true); //1个li的长度
-                if (piclen > 6) {
-                    piclen--;
+                if (piclen > 5) {
+                    piclen -= 5;
                     $('#right').css({ //左箭头触发一次，右箭头可以显示。
                         color: '#333'
                     });
-                    if (piclen === 6) { //无法点击右箭头，到底了
+                    if (piclen === 5) { //无法点击右箭头，到底了
                         $('#left').css({
                             color: '#fff'
                         });
                     }
                     $('#list ul').animate({
-                        left: -(piclen - 6) * liwidth
+                        left: -(piclen - 5) * liwidth
                     });
                 }
             });
 
 
-            //5.购物车的思路
-            //5.1.商品详情页存储购物车的信息 - cookie存
-            //存储商品的sid和商品的数量 - 数组或者对象 - 数组
-            let arrsid = []; //存储商品sid的数组。
-            let arrnum = []; //存储商品数量的数组。
-            //当前的商品是第一次购买，还是多次购买，第一次购买创建商品列表，多次购买只需要增加数量。
-            //疑问：如何确认当前是第一次还是多次。
-            //解答：通过获取cookie来确认，如果是第一次cookie里面肯定不存在当前的sid，否则cookie里面一定存在当前的sid.
-            //提前约定存储cookie的sid和数量的key值。
-            function getcookie() {
-                if (cookie.get('cookiesid') && cookie.get('cookienum')) {
-                    arrsid = cookie.get('cookiesid').split(','); //取出cookie将值转换成数组。
-                    arrnum = cookie.get('cookienum').split(','); //取出cookie将值转换成数组。
+            //购物车的注意事项
+            //1.购物车的核心存储什么：
+            //商品的编号：
+            //商品的数量：
+            let $num = $(".num-box input").val();
+            console.log($num);
+
+            $(".jian").on('click', function() {
+                $num--;
+                $(".num-box input").val($num);
+                if ($num == 1) {
+                    $(".jian").css({
+                        color: '#eee'
+                    })
+                }
+
+
+
+            });
+            $(".jia").on('click', function() {
+                $num++;
+                $(".num-box input").val($num)
+                $(".jian").css({
+                    color: '#7d7c7c'
+                })
+
+            });
+            //2.怎么存储--数组
+            let arrsid = []; //存储商品的编号。
+            let arrnum = []; //存储商品的数量。
+            //3.点击加入购物车按钮(确定是第一次点击还是多次点击)
+            //第一次点击：在购物车列表页面创建商品列表
+            //多次点击：之前创建过商品列表，只需要数量增加。
+
+            //取出cookie,才能判断是第一次还是多次点击
+            function cookietoarray() {
+                if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+                    arrsid = $.cookie('cookiesid').split(','); //获取cookie 同时转换成数组。[1,2,3,4]
+                    arrnum = $.cookie('cookienum').split(','); //获取cookie 同时转换成数组。[12,13,14,15]
+                } else {
+                    arrsid = [];
+                    arrnum = [];
                 }
             }
 
-            $('.p-btn a').on('click', function() {
-                getcookie();
-                //$.inArray(value,array)确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
-                //val():读写表单的值。
-                if ($.inArray(datasid, arrsid) === -1) { //不存在,添加sid和数量
-                    //添加sid
-                    arrsid.push(datasid);
-                    //将整个sid的数组存入cookie
-                    cookie.set('cookiesid', arrsid, 10);
-                    //添加数量
-                    arrnum.push($('#count').val());
-                    //将整个数量的数组存入cookie
-                    cookie.set('cookienum', arrnum, 10)
-                } else { //存在，添加数量
-                    //根据当前的sid找到商品的数量，用当前新加的数量+cookie里面存在的数量。
-                    let sidindex = $.inArray(datasid, arrsid);
-                    let newarrnum = parseInt(arrnum[sidindex]) + parseInt($('#count').val()); //cookie里面存在的数量 + 当前新加的数量
-                    arrnum[sidindex] = newarrnum;
-                    //将整个数量的数组存入cookie
-                    cookie.set('cookienum', arrnum, 10);
+
+
+            $('.joincart').on('click', function() {
+                //获取当前商品对应的sid
+                let $sid = location.search.substring(1).split('=')[1]; //获取sid
+                // console.log(1111);
+                // console.log($sid);
+                cookietoarray();
+                if ($.inArray($sid, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
+                    //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
+                    let $snum = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($num); //取值
+                    console.log($snum);
+                    arrnum[$.inArray($sid, arrsid)] = $snum; //赋值
+                    $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
+                } else {
+                    console.log(22222);
+                    //第一次点击加入购物车按钮,将商品的sid和商品的数量放到提前准备的数组里面，然后将数组传入cookie.
+                    arrsid.push($sid); //将编号$sid push到arrsid数组中
+                    $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
+                    arrnum.push($num); //将数量push到arrnum数组中
+
+                    $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
                 }
-                alert('按钮已经点击了');
+                alert('按钮触发了');
             });
-            //购物车列表页获取商品详情页存储的信息，渲染成对应的列表 - cookie取
         }
     }
 })

@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import "base";
+header {
+    height: 80px;
+    border-bottom: 3px solid $color;
+    margin-bottom: 30px;
+    img {
+        margin-left: 100px;
+    }
+}
+
+.bigwrap {
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px;
+    .wrap {
+        nav {
+            background: #f4f4f4;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 38px;
+            height: 38px;
+            border-left: 3px solid #f10180;
+            border-top: 1px solid #f0f0f0;
+            span {
+                display: inline-block;
+            }
+            .s1 {
+                width: 400px;
+                color: $color;
+            }
+            .s2 {
+                width: 200px;
+            }
+            .s3 {
+                width: 180px;
+            }
+            .s4 {
+                width: 110px;
+            }
+        }
+        ul {
+            @include display(column, flex-start, flex-start);
+            border-left: 1px solid #f0f0f0;
+            border-right: 1px solid #f0f0f0;
+            .cartli {
+                @include display(row, flex-start, center);
+                height: 100px;
+                line-height: 100px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .title {
+                    margin-left: 50px;
+                    width: 160px;
+                }
+                .danjia {
+                    width: 100px;
+                    margin-left: 87px;
+                }
+                .num {
+                    margin-left: 40px;
+                    width: 200px;
+                    .num-box {
+                        width: 93px;
+                        position: relative;
+                        height: 28px;
+                        border: 1px solid #b3b3b3;
+                        text-align: center;
+                        .jian {
+                            float: left;
+                            height: 28px;
+                            width: 29px;
+                            line-height: 28px;
+                            color: #7d7c7c;
+                            background-color: #f9f8f8;
+                        }
+                        .jia {
+                            @extend .jian;
+                        }
+                        .num {
+                            border: none;
+                            border-left: 1px solid #e4e3e3;
+                            border-right: 1px solid #e4e3e3;
+                            float: left;
+                            width: 29px;
+                            height: 26px;
+                            line-height: 28px;
+                            margin: 0;
+                        }
+                    }
+                }
+                .delete {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+.top {
+    border-bottom: 1px solid #d0d0d0;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color;
+    span {
+        line-height: 40px;
+        display: inline-block;
+        height: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $color;
+    }
+}
+
+footer {
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    border: solid 1px #f0f0f0;
+}

@@ -359,23 +359,21 @@ ul {
 }
 
 .goodsinfo .bigwrap #sf {
-  width: 50px;
-  height: 50px;
-  background: orange;
-  opacity: 0.3;
   position: absolute;
   left: 0px;
   top: 0px;
   visibility: hidden;
+  cursor: crosshair;
+  z-index: 110;
 }
 
 .goodsinfo .bigwrap #bf {
-  width: 400px;
-  height: 500px;
-  border: 1px solid #000;
+  width: 420px;
+  height: 420px;
   overflow: hidden;
   position: absolute;
-  left: 410px;
+  top: 0;
+  left: 0px;
   visibility: hidden;
   z-index: 100;
 }
@@ -398,6 +396,7 @@ ul {
 }
 
 .goodsinfo .bigwrap #ulist #right {
+  cursor: pointer;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -409,6 +408,7 @@ ul {
 }
 
 .goodsinfo .bigwrap #ulist #left {
+  cursor: pointer;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -471,8 +471,17 @@ ul {
 }
 
 .goodsinfo .bigwrap .goodsinfo-word {
-  overflow: hidden;
   float: left;
+  position: relative;
+}
+
+.goodsinfo .bigwrap .goodsinfo-word .joincart {
+  padding: 10px;
+  color: #fff;
+  background: #f10180;
+  position: absolute;
+  left: 84px;
+  bottom: -50px;
 }
 
 .goodsinfo .bigwrap .p-name {
@@ -515,9 +524,15 @@ ul {
 .goodsinfo .bigwrap .p-btn {
   margin-left: 50px;
   margin-top: 20px;
+  position: relative;
+  height: 30px;
+  padding: 11px 10px;
 }
 
 .goodsinfo .bigwrap .p-btn .num-box {
+  position: absolute;
+  left: 40px;
+  top: -25px;
   width: 90px;
   position: relative;
   height: 28px;

@@ -4,11 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="cart-module"></script>
 </head>
 
 <body>
-    这里就是购物车页面
+    <header>
+        <img src="http://a.vpimg2.com/upload/upimg2/slogan/cartHeader.png" alt="">
+    </header>
+    <div class="bigwrap">
+        <div class="top">
+            <span>特卖商品</span>
+        </div>
+
+        <div class="wrap">
+            <nav>
+                <span class="s1">唯品自营</span>
+                <span class="s2">单价</span>
+                <span class="s3">数量</span>
+                <span class="s4">操作</span>
+            </nav>
+            <ul>
+                <li class="cartli" style="display: none;">
+                    <img class="img" src="https://h2.appsimg.com/a.appsimg.com/upload/merchandise/pdcvis/2019/03/27/68/5bf45c83-6abe-45f7-a055-71f9c49c20d8_235x235_90.jpg" alt="">
+                    <a class="title">11111111111</a>
+                    <strong class="danjia">22</strong>
+                    <span class="num">   
+                        <dd class="ui-quantity num-box">
+                        <a href="javascript:;" role="button" class="jian">-</a>
+
+                        <input class="num" value="1" />
+
+                        <a href="javascript:;" role="button" class="jia">+</a>
+                    </dd>
+                </span>
+                    <span class="delete">删除</span>
+
+                </li>
+
+            </ul>
+            <footer>
+                唯品自营: 唯品自营商品已满足专享首单免邮，限唯品自营商品10月12日09:59前享1次
+            </footer>
+
+        </div>
+
+        <div class="jisuan">
+            <div class="jiage">
+                <span>共</span>
+                <span class="jian">1</span>
+                <span>  件商品</span>
+                <span>商品价格</span>
+                <span class="price"></span>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
