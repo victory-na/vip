@@ -46,7 +46,7 @@ header {
             .cartli {
                 @include display(row, flex-start, center);
                 height: 100px;
-                line-height: 100px;
+                // line-height: 100px;
                 img {
                     width: 100px;
                     height: 100px;
@@ -54,6 +54,7 @@ header {
                 .title {
                     margin-left: 50px;
                     width: 160px;
+                    line-height: 20px;
                 }
                 .danjia {
                     width: 100px;
@@ -75,6 +76,7 @@ header {
                             line-height: 28px;
                             color: #7d7c7c;
                             background-color: #f9f8f8;
+                            text-decoration: none;
                         }
                         .jia {
                             @extend .jian;

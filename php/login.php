@@ -6,8 +6,8 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
     $pass = $_POST['pass'];
     $result = $conn->query("select * from userinfo where username='$user' and password='$pass'");
     if ($result->fetch_assoc()) { //匹配成功
-        echo true;
+        echo 1;
     } else { //匹配不成功
-        echo false;
+        echo 2;
     }
 }

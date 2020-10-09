@@ -37,12 +37,13 @@ define(['sha1'], function() {
                     url: 'http://192.168.13.36/vip/php/login.php',
                     data: {
                         user: $('.username').val(),
-                        pass: hex_sha1($('.password').val())
+                        pass: $('.password').val()
                     }
                 }).done(function(data) {
-                    if (data) {
-                        location.href = "index.html";
-                        localStorage.setItem('username', $('.username').val());
+                    console.log(data);
+                    if (data == 1) {
+                        location.href = 'index.html';
+                        cookie.set('username', aInput[0].value, 7);
                     } else {
                         $('.password').val('');
                         alert('用户名或者密码错误');

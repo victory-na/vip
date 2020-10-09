@@ -1,15 +1,12 @@
 define(['jcookie'], function() {
     return {
         init: function() {
-            //详情页面：
-            //1.获取地址栏的sid，将sid通过ajax传给后端。
-            //2.后端将对应的sid匹配的数据返回给前端。。
-            //3.前端进行渲染。
-            let datasid = location.search.substring(1).split('=')[1]; //获取sid
-            const spic = $('#spic'); //小图
-            const bpic = $('#bpic'); //大图
-            const sf = $('#sf'); //小放
-            const bf = $('#bf'); //大放
+
+            let datasid = location.search.substring(1).split('=')[1];
+            const spic = $('#spic');
+            const bpic = $('#bpic');
+            const sf = $('#sf');
+            const bf = $('#bf');
 
             if (!datasid) { //如果sid不存在，设置1
                 datasid = 1;

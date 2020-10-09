@@ -120,6 +120,7 @@ define(['sha1'], function() {
                         pass: $('.password').val()
                     }
                 });
+
             })
         }
     }

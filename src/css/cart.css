@@ -68,7 +68,6 @@ header img {
   justify-content: flex-start;
   align-items: center;
   height: 100px;
-  line-height: 100px;
 }
 
 .bigwrap .wrap ul .cartli img {
@@ -79,6 +78,7 @@ header img {
 .bigwrap .wrap ul .cartli .title {
   margin-left: 50px;
   width: 160px;
+  line-height: 20px;
 }
 
 .bigwrap .wrap ul .cartli .danjia {
@@ -106,6 +106,7 @@ header img {
   line-height: 28px;
   color: #7d7c7c;
   background-color: #f9f8f8;
+  text-decoration: none;
 }
 
 .bigwrap .wrap ul .cartli .num .num-box .num {
